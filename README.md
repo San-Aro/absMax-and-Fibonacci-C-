@@ -37,3 +37,9 @@ int fibo(int n)
 
 Console.WriteLine(fibo(10)); // visszatérési érték 55
 ```
+
+## Jelszó erősség ellenőrző
+
+## Magánhangzó törlés
+
+## Elmozdulás
