@@ -9,7 +9,7 @@
 Console.WriteLine(fibo(10)); // visszatérési érték: 55
 
 
-int absMax (int a, int b)
+int absMax(int a, int b)
 {
     int absA = Math.Abs(a);
     int absB = Math.Abs(b);
@@ -78,9 +78,13 @@ Console.WriteLine(maganhangzot_torol("Iden Java szigeten voltunk nyaralni. Nem i
 
 
 string elmozdulas(string iranyiats)
-{ 
+{
     int bal = 0;
     int fel = 0;
+
+    string bElmoz = "";
+    string fElmoz = "";
+
     foreach (char c in iranyiats)
     {
         if (c == 'j' || c == 'J')
@@ -105,4 +109,27 @@ string elmozdulas(string iranyiats)
     {
         return "Nem mentünk sehova";
     }
+
+    if (bal < 0)
+    {
+        bElmoz = "balra " + Math.Abs(bal) + " egységet";
+    }
+    else
+    {
+        bElmoz = "jobbra " + bal + " egységet";
+    }
+
+    if (fel < 0)
+    {
+        fElmoz = "lefelé " + Math.Abs(fel) + " egységet";
+    }
+    else
+    {
+        fElmoz = "felfelé " + fel + " egységet";
+    }
+
+    return bElmoz + " " + fElmoz;
 }
+
+
+Console.WriteLine(elmozdulas("JJFBFFFFFFBBBL")); // visszatérési érték: jobbra 2 egységet felfelé 6 egységet
